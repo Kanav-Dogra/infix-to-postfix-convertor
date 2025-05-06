@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infix to Postfix - Train Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚂 Infix to Postfix Train Simulation</h1>
+
+  <div class="controls">
+    <input type="text" id="expression" placeholder="Enter Infix Expression (e.g. A+B*C)">
+    <button id="startBtn">Start Simulation</button>
+  </div>
+
+  <div class="track-container">
+    <div class="track">
+      <h2>New York (Infix Input)</h2>
+      <div class="rail" id="infixRail"></div>
+    </div>
+
+    <div class="track">
+      <h2>Texas (Stack)</h2>
+      <div class="rail" id="stackRail"></div>
+    </div>
+
+    <div class="track">
+      <h2>California (Postfix Output)</h2>
+      <div class="rail" id="postfixRail"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
