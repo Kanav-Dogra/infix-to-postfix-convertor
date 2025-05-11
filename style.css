@@ -122,16 +122,18 @@ button {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -400px;
-  width: 350px;
-  height: 100%;
-  background-color: #fff;
-  border-left: 2px solid #ccc;
-  padding: 20px;
-  box-shadow: -3px 0 6px rgba(0,0,0,0.2);
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f1f9ff);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #ddd;
+  padding: 30px 20px;
   transition: right 0.4s ease-in-out;
   z-index: 999;
   overflow-y: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .sidebar.open {
@@ -139,19 +141,25 @@ button {
 }
 
 .sidebar h2 {
-  margin-top: 0;
+  margin: 0 0 20px 0;
+  font-size: 24px;
   color: #0077b6;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }
 
 .sidebar ul {
-  text-align: left;
+  list-style-type: disc;
   padding-left: 20px;
+  color: #333;
 }
 
 .sidebar ul li {
-  margin: 10px 0;
-  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.5;
 }
+
 .sidebar::-webkit-scrollbar {
   width: 8px;
 }
@@ -167,4 +175,10 @@ button {
 
 .sidebar::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    border-radius: 0;
+  }
 }
