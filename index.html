@@ -15,20 +15,43 @@
 
   <div class="track-container">
     <div class="track">
-      <h2>New Delhi (Infix Input)</h2>
+      <h2>New York (Infix Input)</h2>
       <div class="rail" id="infixRail"></div>
     </div>
 
     <div class="track">
-      <h2>Pune (Stack)</h2>
+      <h2>Texas (Stack)</h2>
       <div class="rail" id="stackRail"></div>
     </div>
 
     <div class="track">
-      <h2>Mumbai (Postfix Output)</h2>
+      <h2>California (Postfix Output)</h2>
       <div class="rail" id="postfixRail"></div>
     </div>
   </div>
+
+<button id="rulesBtn">🚦 View Rules</button>
+
+
+<div id="sidebar" class="sidebar">
+  <h2>📘 Evaluation of a Postfix formula </h2>
+  <ol type="1">
+    <li>Examine each symbol in the postfix formula, starting at extreme left until you come to an operator.</li>
+    <li>Write down the operator and two operands immediately to its left on a piece of scratch paper.</li>
+    <li>Erase the operator and the operands and write the result creating  the hole .</li>
+    <li>Perform the operation on the operands and write the result in the hole.</li>
+    <li>If the formula now consists of the one value that means the algorithm is finished , else go to step 1.</li>
+  </ol>
+
+  <h2>📘 Algorithm for Evaluation of Postfix formula using Stack</h2>
+  <ol type="1">
+    <li>Set K to 1.</li>
+    <li>Examine the Kth symbol. If it is a variable , push it onto the stack , if it is an operator , pop the top two items off the stack, perform the operation and push the result back into the stack.</li>
+    <li>If K == n the algorithm terminates and the result is on teh stack , otherwise add 1 to K and go to step 2.</li>
+ </ol>
+  <img src="infix-postfix.png" alt="Railroad Analogy" style="width: 100%; border-radius: 10px; margin-top: 15px;">
+  <button onclick="closeSidebar()">Close</button>
+</div>
 
   <script src="script.js"></script>
 </body>
