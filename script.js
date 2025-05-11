@@ -104,3 +104,10 @@ document.getElementById('startBtn').addEventListener('click', () => {
 
     processInfix(); 
 });
+document.getElementById('rulesBtn').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.add('open');
+});
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+}
