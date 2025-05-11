@@ -104,10 +104,15 @@ document.getElementById('startBtn').addEventListener('click', () => {
 
     processInfix(); 
 });
-document.getElementById('rulesBtn').addEventListener('click', () => {
-  document.getElementById('sidebar').classList.add('open');
-});
+const rulesBtn = document.getElementById('rulesBtn');
+const sidebar = document.getElementById('sidebar');
 
-function closeSidebar() {
-  document.getElementById('sidebar').classList.remove('open');
-}
+rulesBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+
+  if (sidebar.classList.contains('open')) {
+    rulesBtn.textContent = "❌ Close Rules";
+  } else {
+    rulesBtn.textContent = "🚦 View Rules";
+  }
+});
