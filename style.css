@@ -115,6 +115,7 @@ button {
   cursor: pointer;
   z-index: 1000;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 
@@ -150,4 +151,20 @@ button {
 .sidebar ul li {
   margin: 10px 0;
   line-height: 1.6;
+}
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
